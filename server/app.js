@@ -5,7 +5,7 @@ var path = require('path');
 var bodyParser = require('body-parser');
 
 //DATABASE MODULE
-var db = require('./modules/db.js');
+// var db = require('./modules/db.js');
 
 //ROUTE MODULES
 var index = require('./routes/index.js');
