@@ -8,18 +8,12 @@
     <link rel="stylesheet" href="styles/style.css" />
 
     <script type="text/javascript" src="vendors/angular/angular.min.js"></script>
-    <script type="text/javascript" src="scripts/client.js"></script>
+    <script type="text/javascript" src="scripts/client.min.js"></script>
 
   </head>
   <body>
     <h1>Flea Market</h1>
     <p>Instructions</p>
-<<<<<<< HEAD
-    <div > bank</div>
-    <div ng-controller='BuyController as buy'> buy</div>
-      {{ buy.currentPrice }}
-    <div > sell</div>
-=======
     <div>bank</div>
     <div ng-controller="BuyController as ctrl">
       <form name="buyForm" ng-submit="ctrl.submit()">
@@ -27,7 +21,5 @@
       </form>
     </div>
     <div>sell</div>
->>>>>>> 72277fb3f69504d39d61a7d2289ab83be497eb7f
-
   </body>
 </html>
