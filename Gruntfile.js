@@ -2,6 +2,16 @@ module.exports = function(grunt){
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     copy: {
+      scripts: {
+        expand: true,
+        cwd: 'client/scripts/',
+        src: ['controllers/bank.js',
+          'controllers/buy.js',
+          'controllers/sell.js',
+          'factories/fleaMarketService.js',
+          'client.js'],
+        dest: 'server/public/scripts/'
+      },
       html: {
         expand: true,
         cwd: 'client/views',
