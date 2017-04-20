@@ -51,12 +51,9 @@ var jewelry = new Collectable('Jewelry', 0, 7.55, 0, 7.55, 'views/images/jewelry
 var wine = new Collectable('Wine', 0, 6.56, 0, 6.56, 'views/images/wine.png');
 
 //
-var electronicObject = {
-  item : [ toaster, lamp, bluRayPlayer, clock]};
-var fruitObject = {
-  item: [ apple, orange, banana, grapes]};
-var collectableObject = {
-  item: [ comicBook, fancyStuffedAnimal, jewelry, wine]};
+var electronicObject = {items: [ toaster, lamp, bluRayPlayer, clock]};
+var fruitObject = {items: [ apple, orange, banana, grapes]};
+var collectableObject = {items: [ comicBook, fancyStuffedAnimal, jewelry, wine]};
 
 //updateBalance() -->add/subtract --> return accountBalance
 
@@ -92,19 +89,36 @@ let sellFunc = (thisItem) => {
 };
 
 //adjPrice
-// var currentPrice = 1.35;
-//
-// var setTimer = setInterval(adjPrice(currentPrice), 15000);
-//
-// function adjPrice(currentPrice){
-//   var max = 0.5;
-//   var min = -0.5;
-//   currentPrice = Math.floor(Math.random() * (max - min + 1)) + min;
-//   console.log(currentPrice);
-//   return currentPrice;
-// }
-//
-// adjPrice(currentPrice);
+
+var currentPrice = {
+  price: 1.35
+}; //testing
+
+var setTimer = setInterval(function(){ addOrSubtract() }, 15000);
+
+function addOrSubtract() {
+  var priceAdjustment = (100 * (Math.random() - 0.5));
+  priceAdjustment = (parseInt(priceAdjustment))/100;
+  adjPrice(priceAdjustment);
+}
+
+function adjPrice(priceAdjustment) {
+  if(priceAdjustment !== 0.00){
+    changePrice(priceAdjustment);
+  } else {
+    addOrSubtract();
+  }
+}
+
+function changePrice(priceAdjustment) {
+  if((currentPrice.price + priceAdjustment) > 0){
+    currentPrice.price = Math.round((currentPrice.price + priceAdjustment) * 100)/100;
+    console.log(currentPrice.price);
+    return currentPrice.price;
+  } else{
+    addOrSubtract();
+  }
+}
 
   return {
     FleaMarketItem : FleaMarketItem,
@@ -112,6 +126,6 @@ let sellFunc = (thisItem) => {
     collectableObject : collectableObject,
     electronicObject : electronicObject,
     myBalance : myBalance,
-    currentPrice : currentPrice
+    currentPrice : currentPrice //testing
   };
 });

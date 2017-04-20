@@ -14,7 +14,6 @@
     <script type="text/javascript" src="scripts/controllers/buy.js"></script>
     <script type="text/javascript" src="scripts/controllers/sell.js"></script>
 
-
   </head>
   <body>
     <h1>Flea Market</h1>
@@ -61,8 +60,8 @@
       <form name="buyForm" ng-submit="ctrl.submit()">
         <input type="submit" value="Buy">
       </form>
+      {{ctrl.currentPrice.price}}
     </div>
-    <div>sell</div>
 
   </body>
 </html>
