@@ -1,18 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html ng-app = "myApp">
   <head>
     <meta charset="utf-8">
-    <title>Chi MEAN</title>
+    <title>Flea Market</title>
 
     <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" href="styles/style.css" />
 
     <script type="text/javascript" src="vendors/angular/angular.min.js"></script>
-    <script type="text/javascript" src="scripts/client.min.js"></script>
+    <script type="text/javascript" src="scripts/client.js"></script>
+    <script type="text/javascript" src="scripts/controllers/sell.js"></script>
 
   </head>
   <body>
+    <h1>Flea Market</h1>
+    <p>Instructions</p>
+    <div > bank</div>
+    <!-- Sell  -->
+    <div ng-controller = "SellController">
+      <p ng-model = "item">Current Price: {{item.currentPrice}}</p>
+      <p ng-model = "item">Quantity: {{item.quantity}}</p>
 
+      <button ng-click = "sellItem(item)" type="button" name="sell" class = "btn btn-primary">Sell</button>
+    </div>
+    <div > buy</div>
 
   </body>
 </html>
