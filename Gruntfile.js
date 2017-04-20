@@ -1,12 +1,6 @@
 module.exports = function(grunt){
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    uglify: {
-      build: {
-        src: 'client/scripts/*.js',
-        dest: 'server/public/scripts/client.min.js'
-      }
-    },
     copy: {
       html: {
         expand: true,
@@ -38,15 +32,15 @@ module.exports = function(grunt){
     },
     watch: {
       files: [
-        'client/**/*.*'
+        'client/**/*.*',
+        'client/**/**/*.*'
       ],
-      tasks: ['uglify', 'copy']
+      tasks: ['copy']
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
-  grunt.registerTask('default', ['uglify', 'copy', 'watch']);
+  grunt.registerTask('default', ['copy', 'watch']);
 };

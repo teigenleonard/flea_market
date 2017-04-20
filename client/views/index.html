@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="styles/style.css" />
 
     <script type="text/javascript" src="vendors/angular/angular.min.js"></script>
-    <script type="text/javascript" src="scripts/client.min.js"></script>
+    <script type="text/javascript" src="scripts/client.js"></script>
 
   </head>
   <body>
     <h1>Flea Market</h1>
     <p>Instructions</p>
     <div > bank</div>
-    <div ng-controller='BuyController'> buy</div>
+    <div ng-controller='BuyController as buy'> buy</div>
       {{ buy.currentPrice }}
     <div > sell</div>
 
