@@ -69,6 +69,14 @@ let buyFunc = (thisItem) => {
   }
 };
 
+let averagingFunc = (thisItem) => {
+  let sum = 0;
+  for( var i = 0; i < thisItem.avgArray; i++ ){
+      sum += parseInt( thisItem.avgArray[i], 10 );
+  }
+  var avg = sum/thisItem.avgArray.length;
+};
+
 let sellFunc = (thisItem) => {
   if((myBalance.amount + thisItem.currentPrice) < 10){
     myBalance.amount = myBalance.amount + thisItem.currentPrice;
