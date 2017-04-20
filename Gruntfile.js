@@ -39,6 +39,11 @@ module.exports = function(grunt){
     }
   });
 
+<<<<<<< HEAD
+=======
+  // grunt.loadNpmTasks('grunt-contrib-uglify');
+
+>>>>>>> b0f03175b0b28807d6ec9145c6342bc86ffe5077
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
