@@ -4,14 +4,6 @@ myApp.factory('fleaMarketService', function() {
 //class MarketItem {currentPrice, name, quanity, avePrice(), iniital price -> stretch}
 //Create Parent Class
 class FleaMarketItem {
-    constructor ( name, quantity, initialPrice, currentPrice, averagePrice ){
-      this.name = name,
-      this.quantity = quantity,
-      this.intialPrice = initialPrice,
-      this.currentPrice = currentPrice,
-      this.averagePrice = averagePrice
-    }
-
     constructor ( name, quantity, initialPrice, currentPrice, averagePrice, image ){
       this.name = name;
       this.quantity = quantity;
