@@ -8,5 +8,6 @@ myApp.controller('BuyController', ['fleaMarketService', function(fleaMarketServi
   var buy = this;
   buy.submit = function(){
     console.log('in BuyController');
+
   };
 }]);

@@ -14,6 +14,12 @@ function sellItem(item) {
   return item;
 
 }
+
+sell.fruitObject = fleaMarketService.fruitObject;
+sell.electronicObject = fleaMarketService.electronicObject;
+sell.collectableObject = fleaMarketService.collectableObject;
+
+console.log(sell.fruitObject);
 //need Class from factory
 
 }]);

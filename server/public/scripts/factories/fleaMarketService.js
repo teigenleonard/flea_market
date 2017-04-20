@@ -7,7 +7,7 @@ class FleaMarketItem {
     constructor ( name, quantity, initialPrice, currentPrice, averagePrice ){
       this.name = name;
       this.quantity = quantity;
-      this.intialPrice = initialPrice;
+      this.initialPrice = initialPrice;
       this.currentPrice = currentPrice;
       this.averagePrice = averagePrice;
     };
@@ -15,7 +15,7 @@ class FleaMarketItem {
   //children (smallElec, fruits, collectables)
 // Create Electronic Child
 class Electronic extends FleaMarketItem {
-    constructor ( name, quantity, initialPrice, currentPrice, averagePrice ) {
+    constructor ( name, quantity, initialPrice, currentPrice, averagePrice) {
       super ( name, quantity, initialPrice, currentPrice, averagePrice );
     }
 }
@@ -39,8 +39,8 @@ var clock = new Electronic('Clock', 0, 4.44, 0);
 
 // Fruit Children
 var apple = new Fruit('Apple', 0, 0.45, 0);
-var orange = new Fruit('Orange', 0, 1.22, 0);
-var banana = new Fruit('Banana', 0, 8.88, 0);
+var orange = new Fruit('Orange', 0, 2.12, 0);
+var banana = new Fruit('Banana', 0, 1.43, 0);
 var grapes = new Fruit('Grapes', 0, 3.32, 0);
 
 // Collectable Children
