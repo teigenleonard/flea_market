@@ -92,7 +92,7 @@ var currentPrice = {
   price: 1.35
 }; //testing
 
-var setTimer = setInterval(function(){ addOrSubtract() }, 1000);
+var setTimer = setInterval(function(){ addOrSubtract() }, 15000);
 
 function addOrSubtract() {
   var priceAdjustment = (100 * (Math.random() - 0.5));
