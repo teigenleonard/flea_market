@@ -4,12 +4,13 @@ myApp.factory('fleaMarketService', function() {
 //class MarketItem {currentPrice, name, quanity, avePrice(), iniital price -> stretch}
 //Create Parent Class
 class FleaMarketItem {
-    constructor ( name, quantity, initialPrice, currentPrice, averagePrice );
+    constructor ( name, quantity, initialPrice, currentPrice, averagePrice ){
       this.name = name;
       this.quantity = quantity;
       this.intialPrice = initialPrice;
       this.currentPrice = currentPrice;
       this.averagePrice = averagePrice;
+    };
 }
   //children (smallElec, fruits, collectables)
 // Create Electronic Child
@@ -49,9 +50,12 @@ var jewelry = new Collectable('Jewelry', 0, 7.55, 0);
 var wine = new Collectable('Wine', 0, 6.56, 0);
 
 //
-var electronicObject = {[ toaster, lamp, bluRayPlayer, clock]};
-var fruitObject = {[ apple, orange, banana, grapes]};
-var collectableObject = {[ comicBook, fancyStuffedAnimal, jewelry, wine]};
+var electronicObject = {
+  item : [ toaster, lamp, bluRayPlayer, clock]};
+var fruitObject = {
+  item: [ apple, orange, banana, grapes]};
+var collectableObject = {
+  item: [ comicBook, fancyStuffedAnimal, jewelry, wine]};
 
 //updateBalance() -->add/subtract --> return accountBalance
 
