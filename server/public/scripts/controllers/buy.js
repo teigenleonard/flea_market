@@ -11,5 +11,5 @@ myApp.controller('BuyController', ['fleaMarketService', function(fleaMarketServi
   };
 
   buy.currentPrice = fleaMarketService.currentPrice;
-  
+
 }]);
