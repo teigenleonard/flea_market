@@ -16,11 +16,11 @@
     <p>Instructions</p>
     <div > bank</div>
     <!-- Sell  -->
-    <div ng-controller = "SellController">
+    <div ng-controller = "SellController as sell">
       <p ng-model = "item.currentPrice">Current Price: {{item.currentPrice}}</p>
       <p ng-model = "item.quanity">Quantity: {{item.quantity}}</p>
 
-      <button ng-click = "sellItem(item)" type="button" name="sell" class = "btn btn-primary">Sell</button>
+      <button ng-click = "sell.sellItem(item)" type="button" name="sell" class = "btn btn-primary">Sell</button>
     </div>
     <div > buy</div>
     <div>bank</div>
