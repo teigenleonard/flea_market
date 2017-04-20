@@ -13,17 +13,15 @@ sell.sellItem = function(item) {
   // item.currentPrice = item.currentPrice;
   // return item;
 
-<<<<<<< HEAD
-}
+};
 
 sell.fruitObject = fleaMarketService.fruitObject;
 sell.electronicObject = fleaMarketService.electronicObject;
 sell.collectableObject = fleaMarketService.collectableObject;
 
 console.log(sell.fruitObject);
-=======
-};
->>>>>>> 39de5dbeb3b722354336db815502026959596d5e
+
+
 //need Class from factory
 
 }]);
