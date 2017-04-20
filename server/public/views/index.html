@@ -18,8 +18,8 @@
     <div > bank</div>
     <!-- Sell  -->
     <div ng-controller = "SellController">
-      <p ng-model = "item">Current Price: {{item.currentPrice}}</p>
-      <p ng-model = "item">Quantity: {{item.quantity}}</p>
+      <p ng-model = "item.currentPrice">Current Price: {{item.currentPrice}}</p>
+      <p ng-model = "item.quanity">Quantity: {{item.quantity}}</p>
 
       <button ng-click = "sellItem(item)" type="button" name="sell" class = "btn btn-primary">Sell</button>
     </div>
@@ -30,6 +30,7 @@
         <input type="submit" value="Buy">
       </form>
     </div>
+    <div>sell</div>
 
   </body>
 </html>
