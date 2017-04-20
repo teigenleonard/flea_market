@@ -4,7 +4,7 @@
 //updateBalance() send se;; function to chris
 
 myApp.controller('SellController', ['fleaMarketService', function(fleaMarketService) {
-
+console.log("sourced for Sell!");
 var sell = this;
 
 function sellItem(item) {
