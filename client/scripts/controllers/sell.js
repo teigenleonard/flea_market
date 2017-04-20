@@ -5,4 +5,15 @@
 
 myApp.controller('SellController', ['fleaMarketService', function(fleaMarketService) {
 
+var sell = this;
+
+function sellItem(item) {
+  console.log("In Sell Controller");
+  item.quantity -= item.quanity;
+  item.currentPrice = item.currentPrice;
+  return item;
+
+}
+//need Class from factory
+
 }]);
