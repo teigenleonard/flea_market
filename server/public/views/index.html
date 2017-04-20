@@ -14,10 +14,20 @@
   <body>
     <h1>Flea Market</h1>
     <p>Instructions</p>
+<<<<<<< HEAD
     <div > bank</div>
     <div ng-controller='BuyController as buy'> buy</div>
       {{ buy.currentPrice }}
     <div > sell</div>
+=======
+    <div>bank</div>
+    <div ng-controller="BuyController as ctrl">
+      <form name="buyForm" ng-submit="ctrl.submit()">
+        <input type="submit" value="Buy">
+      </form>
+    </div>
+    <div>sell</div>
+>>>>>>> 72277fb3f69504d39d61a7d2289ab83be497eb7f
 
   </body>
 </html>
