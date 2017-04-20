@@ -4,4 +4,7 @@
 
 myApp.controller('BuyController', ['fleaMarketService', function(fleaMarketService) {
 
+  var buy = this;
+  console.log(this);
+
 }]);
