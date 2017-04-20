@@ -9,4 +9,7 @@ myApp.controller('BuyController', ['fleaMarketService', function(fleaMarketServi
   buy.submit = function(){
     console.log('in BuyController');
   };
+
+  buy.currentPrice = fleaMarketService.currentPrice;
+  
 }]);

@@ -4,12 +4,13 @@ myApp.factory('fleaMarketService', function() {
 //class MarketItem {currentPrice, name, quanity, avePrice(), iniital price -> stretch}
 //Create Parent Class
 class FleaMarketItem {
-    constructor ( name, quantity, initialPrice, currentPrice, averagePrice );
-      this.name = name;
-      this.quantity = quantity;
-      this.intialPrice = initialPrice;
-      this.currentPrice = currentPrice;
-      this.averagePrice = averagePrice;
+    constructor ( name, quantity, initialPrice, currentPrice, averagePrice ){
+      this.name = name,
+      this.quantity = quantity,
+      this.intialPrice = initialPrice,
+      this.currentPrice = currentPrice,
+      this.averagePrice = averagePrice
+    }
 }
   //children (smallElec, fruits, collectables)
 // Create Electronic Child
@@ -87,26 +88,25 @@ let sellFunc = (thisItem) => {
 };
 
 //adjPrice
-var currentPrice = 1.35;
+var currentPrice = 1.35; //testing
 
 var setTimer = setInterval(adjPrice(currentPrice), 15000);
 
 function adjPrice(currentPrice){
-  var max = 0.5;
-  var min = -0.5;
-  currentPrice = Math.floor(Math.random() * (max - min + 1)) + min;
-  console.log(currentPrice);
-  return currentPrice;
+  console.log('Tic-Tock');
+  // var max = 0.5;
+  // var min = -0.5;
+  // currentPrice = Math.floor(Math.random() * (max - min + 1)) + min;
+  // console.log(currentPrice);
+  // return currentPrice;
 };
 
-adjPrice(currentPrice);
-
   return {
-    FleaMartetItem : FleaMarketItem,
+    FleaMarketItem : FleaMarketItem,
     fruitObject : fruitObject,
     collectableObject : collectableObject,
     electronicObject : electronicObject,
     myBalance : myBalance,
-    currentPrice : currentPrice
+    currentPrice : currentPrice //testing
   };
 });
