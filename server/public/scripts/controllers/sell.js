@@ -7,13 +7,21 @@ myApp.controller('SellController', ['fleaMarketService', function(fleaMarketServ
 console.log("sourced for Sell!");
 var sell = this;
 
-function sellItem(item) {
+sell.sellItem = function(item) {
   console.log("In Sell Controller");
-  item.quantity -= item.quanity;
-  item.currentPrice = item.currentPrice;
-  return item;
+  // item.quantity -= item.quanity;
+  // item.currentPrice = item.currentPrice;
+  // return item;
 
-}
+};
+
+sell.fruitObject = fleaMarketService.fruitObject;
+sell.electronicObject = fleaMarketService.electronicObject;
+sell.collectableObject = fleaMarketService.collectableObject;
+
+console.log(sell.fruitObject);
+
+
 //need Class from factory
 
 }]);
