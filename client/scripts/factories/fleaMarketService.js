@@ -11,8 +11,8 @@ let myBalance = {
 };
 
 let buyFunc = (thisItem) => {
-  if((myBalance - thisItem.currentPrice) > 0){
-    myBalance = myBalance - thisItem.currentPrice;
+  if((myBalance.amount - thisItem.currentPrice) > 0){
+    myBalance.amount = myBalance.amount - thisItem.currentPrice;
     thisItem.avgArray.push(thisItem.currentPrice);
   }
   else{
@@ -21,8 +21,8 @@ let buyFunc = (thisItem) => {
 };
 
 let sellFunc = (thisItem) => {
-  if((myBalance + thisItem.currentPrice) < 10){
-    myBalance = myBalance + thisItem.currentPrice;
+  if((myBalance.amount + thisItem.currentPrice) < 10){
+    myBalance.amount = myBalance.amount + thisItem.currentPrice;
   }
   else{
     return false;
