@@ -15,6 +15,7 @@
   <body>
     <h1>Flea Market</h1>
     <p>Instructions</p>
+<<<<<<< HEAD
     <div > bank</div>
     <!-- Sell  -->
     <div ng-controller = "SellController">
@@ -24,6 +25,15 @@
       <button ng-click = "sellItem(item)" type="button" name="sell" class = "btn btn-primary">Sell</button>
     </div>
     <div > buy</div>
+=======
+    <div>bank</div>
+    <div ng-controller="BuyController as ctrl">
+      <form name="buyForm" ng-submit="ctrl.submit()">
+        <input type="submit" value="Buy">
+      </form>
+    </div>
+    <div>sell</div>
+>>>>>>> master
 
   </body>
 </html>
