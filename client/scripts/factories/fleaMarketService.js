@@ -30,7 +30,6 @@ class Collectable extends FleaMarketItem {
       super ( name, quantity, initialPrice, currentPrice, averagePrice );
     }
 }
-
 // Electronic Children
 var toaster = new Electronic('Toaster', 0, 6.43, 0);
 var lamp = new Electronic('Lamp', 0, 5.23, 0);
@@ -53,6 +52,31 @@ var wine = new Collectable('Wine', 0, 6.56, 0);
 var electronicObject = {[ toaster, lamp, bluRayPlayer, clock]};
 var fruitObject = {[ apple, orange, banana, grapes]};
 var collectableObject = {[ comicBook, fancyStuffedAnimal, jewelry, wine]};
+
+//updateBalance() -->add/subtract --> return accountBalance
+
+let myBalance = {
+  amount: 100
+};
+
+let buyFunc = (thisItem) => {
+  if((myBalance.amount - thisItem.currentPrice) > 0){
+    myBalance.amount = myBalance.amount - thisItem.currentPrice;
+    thisItem.avgArray.push(thisItem.currentPrice);
+  }
+  else{
+    return false;
+  }
+};
+
+let sellFunc = (thisItem) => {
+  if((myBalance.amount + thisItem.currentPrice) < 10){
+    myBalance.amount = myBalance.amount + thisItem.currentPrice;
+  }
+  else{
+    return false;
+  }
+};
 
 //updateBalance() -->add/subtract --> return accountBalance
 
