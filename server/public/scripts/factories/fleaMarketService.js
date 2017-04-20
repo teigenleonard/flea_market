@@ -7,7 +7,7 @@ class FleaMarketItem {
     constructor ( name, quantity, initialPrice, currentPrice, averagePrice, image ){
       this.name = name;
       this.quantity = quantity;
-      this.intialPrice = initialPrice;
+      this.initialPrice = initialPrice;
       this.currentPrice = currentPrice;
       this.averagePrice = averagePrice;
       this.image = image;
@@ -102,7 +102,7 @@ function adjPrice(currentPrice){
   currentPrice = Math.floor(Math.random() * (max - min + 1)) + min;
   console.log(currentPrice);
   return currentPrice;
-};
+}
 
 adjPrice(currentPrice);
 

@@ -21,14 +21,43 @@
     <p>Instructions</p>
     <div > bank</div>
     <!-- Sell  -->
-    <div ng-controller = "SellController as sell">
-      <p ng-model = "item.currentPrice">Current Price: {{item.currentPrice}}</p>
-      <p ng-model = "item.quanity">Quantity: {{item.quantity}}</p>
-
-      <button ng-click = "sell.sellItem(item)" type="button" name="sell" class = "btn btn-primary">Sell</button>
+<<<<<<< HEAD
+    <div ng-controller = "SellController as sell" >
+      <div ng-repeat="item in sell.fruitObject.item">
+        <div class="well col-md-3">
+          <p class="image" ng-model = "item.image"> {{item.image}}</p>
+          <p ng-model = "item.name">Name: {{item.name}}</p>
+          <p ng-model = "item.quanity">Quantity: {{item.quantity}}</p>
+          <p ng-model = "item.currentPrice">Current Price: {{item.currentPrice}}</p>
+          <p ng-model = "item.averagePrice">Average Price: {{item.averagePrice}}</p>
+          <p ng-model = "item.initialPrice">Initial Price: {{item.initialPrice}}</p>
+          <button ng-click = "sell.sellItem(item)" type="button" name="sell" class = "btn btn-primary">Sell</button>
+        </div>
+      </div>
+      <div ng-repeat="item in sell.collectableObject.item">
+        <div class="well col-md-3">
+          <p class="image" ng-model = "item.image">{{item.image}}</p>
+          <p ng-model = "item.name">Name: {{item.name}}</p>
+          <p ng-model = "item.quanity">Quantity: {{item.quantity}}</p>
+          <p ng-model = "item.currentPrice">Current Price: {{item.currentPrice}}</p>
+          <p ng-model = "item.averagePrice">Average Price: {{item.averagePrice}}</p>
+          <p ng-model = "item.initialPrice">Initial Price: {{item.initialPrice}}</p>
+          <button ng-click = "sell.sellItem(item)" type="button" name="sell" class = "btn btn-primary">Sell</button>
+        </div>
+      </div>
+      <div ng-repeat="item in sell.electronicObject.item">
+        <div class="well col-md-3">
+          <p class="image" ng-model = "item.image"> {{item.image}}</p>
+          <p ng-model = "item.name">Name: {{item.name}}</p>
+          <p ng-model = "item.quanity">Quantity: {{item.quantity}}</p>
+          <p ng-model = "item.currentPrice">Current Price: {{item.currentPrice}}</p>
+          <p ng-model = "item.averagePrice">Average Price: {{item.averagePrice}}</p>
+          <p ng-model = "item.initialPrice">Initial Price: {{item.initialPrice}}</p>
+          <button ng-click = "sell.sellItem(item)" type="button" name="sell" class = "btn btn-primary">Sell</button>
+        </div>
+      </div>
     </div>
-    <div > buy</div>
-    <div>bank</div>
+
     <div ng-controller="BuyController as ctrl">
       <form name="buyForm" ng-submit="ctrl.submit()">
         <input type="submit" value="Buy">
