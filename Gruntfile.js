@@ -39,13 +39,15 @@ module.exports = function(grunt){
     },
     watch: {
       files: [
-        'client/**/*.*'
+        'client/**/*.*',
+        'client/**/**/*.*'
       ],
       tasks: ['copy']
     }
   });
 
   // grunt.loadNpmTasks('grunt-contrib-uglify');
+
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
