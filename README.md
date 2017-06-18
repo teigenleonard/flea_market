@@ -4,11 +4,11 @@ This is a full stack application that is a game in which the user buys items in 
 
 
 ## Built With:
-Javascript
-ES6
-Node
-Express
-Grunt
-Bootstrap
-Angular
-MongoDB
+* Javascript
+* ES6
+* Node
+* Express
+* Grunt
+* Bootstrap
+* Angular
+* MongoDB
